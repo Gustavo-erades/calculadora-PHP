@@ -8,7 +8,6 @@
 
     #verifida se o usuário pediu para calcular
     if(isset($_POST['submit'])){
-
          #verifica a operação desejada e faz o cálculo
         if($operacao!=""  && $num1!="" && $num2!=""){
             if($operacao=="soma"){
@@ -21,6 +20,10 @@
                 $resultado=number_format(($num1/$num2),1,",",".");
             }elseif($operacao=="media"){
                 $resultado=number_format((($num1+$num2)/2),2,",",".");
+            }elseif($operacao=="random"){
+                $resultado=mt_rand($num1,$num2);
+            }elseif($operacao=="maior"){
+                $resultado=max($num1,$num2);
             }
         }else{
             $resultado="Números para operação não definidos";
@@ -89,6 +92,16 @@
                 <span>
                     <label for="media">Média</label>
                     <input type="radio" name="operacao" id="media" value="media">
+                </span>
+                <!-- número aleatório no intervalo dos números inscritos -->
+                <span>
+                    <label for="random">Aleatório</label>
+                    <input type="radio" name="operacao" id="random" value="random">
+                </span>
+                 <!-- valor maior -->
+                 <span>
+                    <label for="maior">Maior</label>
+                    <input type="radio" name="operacao" id="maior" value="maior">
                 </span>
                 <!-- botão -->
                 <button type="submit" name="submit" id="botao">Calcular</button>
