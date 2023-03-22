@@ -56,7 +56,7 @@
                 <br><br>
                 <!-- número 2 -->
                 <label for="num2">Número 2</label>
-                <input type="number" name="num2" id="num2" min="0" value="<?php echo $num1?>">
+                <input type="number" name="num2" id="num2" min="0" value="<?php echo $num2?>">
             </div>   
             <br>
             <h1>Marque a Operação desejada:</h1>
