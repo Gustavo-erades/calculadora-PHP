@@ -10,7 +10,7 @@
     if(isset($_POST['submit'])){
 
          #verifica a operação desejada e faz o cálculo
-        if($operacao!=""){
+        if($operacao!=""  && $num1!="" && $num2!=""){
             if($operacao=="soma"){
                 $resultado=$num1+$num2;
             }elseif($operacao=="subtracao"){
@@ -23,7 +23,10 @@
                 $resultado=number_format((($num1+$num2)/2),2,",",".");
             }
         }else{
-            $resultado="Operação aritimética não definida!";
+            $resultado="Números para operação não definidos";
+        }
+        if($operacao==""  && $num1!="" && $num2!=""){
+            $resultado="Operação Aritimética não definida";
         }
     } else{
         $resultado="";
@@ -43,7 +46,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora PHP</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" href="calculadora.png" type="image/x-icon">
 </head>
 <body>
     <div id="container">
