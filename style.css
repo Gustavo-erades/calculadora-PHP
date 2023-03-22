@@ -1,0 +1,69 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(to bottom, #1271ff,#0f4597,#092147);
+    background-attachment: fixed;
+}
+#container{
+    text-align: center;
+    margin-top: 100px;
+}
+fieldset{
+    display: block;
+    padding:8px;
+}
+#botao{
+    padding: 5px;
+    text-transform: uppercase;
+    cursor:pointer;
+    font-weight: bold;
+    border-radius: 10px;
+}
+input, label{
+    cursor:pointer;
+}
+h3{
+    text-decoration: underline;
+}
+#inserir_numero{
+    padding: 8px;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.4);
+    display: inline-block;
+}
+#div_operacoes{
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.4);
+    display: inline-block;
+}
+#div_operacoes span{
+    margin-right: 10px;
+    padding: 3px;
+    border: 3px dashed #fff;
+    cursor: pointer;
+}
+#div_operacoes span:hover, #div_operacoes span:active{
+    background-color: #092147;
+}
+#inserir_numero{
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+#div_operacoes{
+    margin-bottom: 10px;
+}
+#recarregar{
+    margin-top: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px;
+}
