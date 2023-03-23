@@ -17,19 +17,23 @@
             }elseif($operacao=="multi"){
                 $resultado=number_format($num1*$num2,0,",",".");
             }elseif($operacao=="divisao"){
-                $resultado=number_format(($num1/$num2),1,",",".");
+                if($num2==0){
+                    $resultado="Impossível! Não existe divisão por zero :(.";
+                }else{
+                    $resultado=number_format(($num1/$num2),1,",",".");
+                }
             }elseif($operacao=="media"){
                 $resultado=number_format((($num1+$num2)/2),2,",",".");
             }elseif($operacao=="random"){
-                $resultado=mt_rand($num1,$num2);
+                $resultado=mt_rand(min($num1,$num2),max($num1,$num2));
             }elseif($operacao=="maior"){
                 $resultado=max($num1,$num2);
             }
         }else{
-            $resultado="Números para operação não definidos";
+            $resultado="Números para operação não definidos :(";
         }
         if($operacao==""  && $num1!="" && $num2!=""){
-            $resultado="Operação Aritimética não definida";
+            $resultado="Operação Aritimética não definida :(";
         }
     } else{
         $resultado="";
